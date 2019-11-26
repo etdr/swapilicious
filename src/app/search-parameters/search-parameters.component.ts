@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SearchService } from '../search.service';
+
 @Component({
   selector: 'app-search-parameters',
   templateUrl: './search-parameters.component.html',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchParametersComponent implements OnInit {
 
-  constructor() { }
+  kind: string = "person";
+  term: string = "";
+
+  constructor(private searchService: SearchService) { }
 
   ngOnInit() {
+  }
+
+  getResults(): void {
+    this.searchService.getResults(this.kind, this.term);
   }
 
 }
