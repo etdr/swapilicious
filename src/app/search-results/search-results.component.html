@@ -1,19 +1,5 @@
-<p>search-results works!</p>
-
-
-
-<!-- <label>Select Your Star Wars Theme</label>
-<select id="swapiTheme">
-    <option value="1">Ship</option>
-    <option value="2">Characters</option>
-    <option value="3">Films</option>
-</select> -->
-
-<!-- <button mat-button [matMenuTriggerFor]="animals">Choose SWAPI Theme</button>
-
-<mat-menu #animals="matMenu">
-  <button mat-menu-item [matMenuTriggerFor]="shipComponentIThink">Ship</button>
-  <button mat-menu-item [matMenuTriggerFor]="characterComponentIThink">Characters</button>
-  <button mat-menu-item [matMenuTriggerFor]="filmsComponentIThink">Films</button>
-</mat-menu> -->
-
+<div *ngIf="searchService.results.length">
+  <ul>
+    <li *ngFor="let r of results">{{r.name}}</li>
+  </ul>
+</div>
