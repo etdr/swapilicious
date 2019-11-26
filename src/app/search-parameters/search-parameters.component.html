@@ -1,8 +1,8 @@
 <button mat-button [matMenuTriggerFor]="belowMenu">Choose Your Star Wars Theme</button>
 <mat-menu #belowMenu="matMenu" yPosition="below">
-  <button mat-menu-item>People</button>
-  <button mat-menu-item>Ships</button>
-  <button mat-menu-item>Films</button>
+  <button mat-menu-item (click)="kind='person'">People</button>
+  <button mat-menu-item (click)="kind='ship'">Ships</button>
+  <button mat-menu-item (click)="kind='film'">Films</button>
 </mat-menu>
 
 <br/>
@@ -11,5 +11,5 @@
 <label for="search">
 <input matInput type="search" id="search" name="search" placeholder="Search For Your Star Wars {{kind}}" [(ngModel)]="term" >
 </label>
-<button mat-button type="search">SEARCH</button>
+<button mat-button type="search" (click)="getResults()">SEARCH</button>
 </div>

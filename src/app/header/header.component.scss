@@ -1,0 +1,40 @@
+// @import url("starjedioutline.ttf");
+
+// @font-face {
+//   font-family: 'Star Jedi Outline';
+//   src: url("starjedioutline.ttf");
+// }
+
+#headerBar {
+  background-color: black;
+  height: 200px;
+  width: 100%;
+  // border: 1px solid white;
+  z-index: 1;
+  // display: flex;
+}
+
+// #h1Swapi {
+//   border: 1px solid yellow;
+//   width: 15%;
+//   margin: auto;
+//   font-family: "Star Jedi Outline";
+
+// }
+
+.vaderDiv {
+  border: 1px solid white;
+  height: 100px;
+  width: 100px;
+  margin-top: 50px;
+}
+.vader {
+  height: 90px;
+  width: 90px;
+}
+
+.logo {
+  display: inline-grid;
+  z-index: 2;
+
+}
