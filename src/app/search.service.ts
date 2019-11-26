@@ -18,13 +18,13 @@ export class SearchService {
     private http: HttpClient
   ) { }
 
-  getResults (kind: string, term: string): Observable<Item[]> {
+  getResults (kind: string, term: string): void {
     if (!term.trim()) {
-      return of([]);
+      this.results = [];
     }
     switch (kind) {
       case 'person':
-        return this.http.get<Item[]>(this.baseUrl + `/people/${encodeURIComponent(term)}`);
+        this.http.get<Person[]>(this.baseUrl + `/people/?search=${encodeURIComponent(term)}`).subscribe(results => {console.log('returning results', results); this.results = results.results});
       case 'ship':
         return this.http.get<Ship[]>(this.baseUrl + `/starship/${encodeURIComponent(term)}`);
       case 'film':
