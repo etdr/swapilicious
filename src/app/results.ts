@@ -21,3 +21,8 @@ export class Film extends Item {
   director: string;
   release_date: string;
 }
+
+
+export class Results {
+  results: Item[];
+}
