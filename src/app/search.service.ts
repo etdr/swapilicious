@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-import { Item, Person, Ship, Film } from './results';
+import { Item, Person, Ship, Film, Results } from './results';
 
 @Injectable({
   providedIn: 'root'
@@ -24,13 +24,13 @@ export class SearchService {
     }
     switch (kind) {
       case 'person':
-        this.http.get(this.baseUrl + `/people/?search=${encodeURIComponent(term)}`).subscribe(results => this.results = results.results);
+        this.http.get<Results>(this.baseUrl + `/people/?search=${encodeURIComponent(term)}`).subscribe(results => this.results = results.results);
         break;
       case 'ship':
-        this.http.get(this.baseUrl + `/starships/?search=${encodeURIComponent(term)}`).subscribe(results => this.results = results.results);
+        this.http.get<Results>(this.baseUrl + `/starships/?search=${encodeURIComponent(term)}`).subscribe(results => this.results = results.results);
         break;
       case 'film':
-        this.http.get(this.baseUrl + `/films/?search=${encodeURIComponent(term)}`).subscribe(results => this.results = results.results);
+        this.http.get<Results>(this.baseUrl + `/films/?search=${encodeURIComponent(term)}`).subscribe(results => this.results = results.results);
         break;
     }
     

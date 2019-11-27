@@ -1,40 +1,66 @@
-// @import url("starjedioutline.ttf");
-
-// @font-face {
-//   font-family: 'Star Jedi Outline';
-//   src: url("starjedioutline.ttf");
-// }
-
 #headerBar {
   background-color: black;
   height: 200px;
   width: 100%;
   // border: 1px solid white;
   z-index: 1;
-  // display: flex;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  align-items: center;
+  justify-content: center;
+
+
 }
 
 // #h1Swapi {
 //   border: 1px solid yellow;
 //   width: 15%;
 //   margin: auto;
-//   font-family: "Star Jedi Outline";
 
 // }
 
-.vaderDiv {
-  border: 1px solid white;
+#vaderDiv {
   height: 100px;
   width: 100px;
-  margin-top: 50px;
+  // border: 1px solid white;
+
+  // margin-top: 50px;
+  // display: flex;
 }
-.vader {
+
+#vader {
+  height: 90px;
+  width: 90px;
+
+
+}
+
+#logo {
+  // display: flex;
+  z-index: 2;
+  // border: 1px solid white;
+  height: 100px;
+}
+
+#falconDiv {
+  height: 100px;
+  width: 100px;
+  // border: 1px solid white;
+}
+
+#falconImg {
   height: 90px;
   width: 90px;
 }
 
-.logo {
-  display: inline-grid;
-  z-index: 2;
+#lightDiv {
+  border: 1px solid white;
+}
 
+#lightImg {
+  border: 1px solid orange;
+  height: 40px;
+  width: 250px;
+  flex-wrap: wrap;
 }
