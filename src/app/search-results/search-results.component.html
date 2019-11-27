@@ -1,5 +1,25 @@
 <div *ngIf="searchService.results.length">
-  <ul>
-    <li *ngFor="let r of searchService.results">{{r.name}}</li>
+  <ul *ngIf="searchService.results[0].height">
+    <li *ngFor="let r of searchService.results">
+      <h3>{{r.name | uppercase}}</h3>
+      <p>mass {{r.mass}}, height {{r.height}}</p>
+      <p>born {{r.birth_year}}</p>
+    </li>
+  </ul>
+  <ul *ngIf="searchService.results[0].model">
+    <li *ngFor="let r of searchService.results">
+      <h3>{{r.name | uppercase}}</h3>
+      <p>model {{r.model}}</p>
+      <p>manufacturer {{r.manufacturer}}</p>
+      <p>{{r.length}} in length</p>
+    </li>
+  </ul>
+  <ul *ngIf="searchService.results[0].title">
+    <li *ngFor="let r of searchService.results">
+      <h3>{{r.title | uppercase}}</h3>
+      <p>Episode {{r.episode_id}}</p>
+      <p>directed by {{r.director}}</p>
+      <p>released on {{r.release_date}}</p>
+    </li>
   </ul>
 </div>

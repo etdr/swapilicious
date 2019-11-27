@@ -24,11 +24,14 @@ export class SearchService {
     }
     switch (kind) {
       case 'person':
-        this.http.get<Person[]>(this.baseUrl + `/people/?search=${encodeURIComponent(term)}`).subscribe(results => {console.log('returning results', results); this.results = results.results});
+        this.http.get(this.baseUrl + `/people/?search=${encodeURIComponent(term)}`).subscribe(results => this.results = results.results);
+        break;
       case 'ship':
-        return this.http.get<Ship[]>(this.baseUrl + `/starship/${encodeURIComponent(term)}`);
+        this.http.get(this.baseUrl + `/starships/?search=${encodeURIComponent(term)}`).subscribe(results => this.results = results.results);
+        break;
       case 'film':
-        return this.http.get<Film[]>(this.baseUrl + `/films/${encodeURIComponent(term)}`);
+        this.http.get(this.baseUrl + `/films/?search=${encodeURIComponent(term)}`).subscribe(results => this.results = results.results);
+        break;
     }
     
   }
