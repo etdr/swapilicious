@@ -32,7 +32,7 @@ $swapilicious-theme: mat-light-theme($swapilicious-primary, $swapilicious-accent
 html, body {
   height: 100%;
   background-image: url('./assets/starrynight.jpg');
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
 
 }
