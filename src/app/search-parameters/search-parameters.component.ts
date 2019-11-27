@@ -9,7 +9,7 @@ import { SearchService } from '../search.service';
 })
 export class SearchParametersComponent implements OnInit {
 
-  kind: string = "person";
+  kind: string = "";
   term: string = "";
 
   constructor(private searchService: SearchService) { }

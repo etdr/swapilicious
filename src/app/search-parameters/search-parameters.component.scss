@@ -26,6 +26,21 @@
   .search {
     order: 2;
     padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
   }
   
-  
+  #dropBut {
+    // background-color:  #808080a0;
+    background-color: rgba(0, 0, 0, .35);
+    padding: 15px 25px 15px 25px;
+    font-size: 20px;
+    }
+
+  #searchBut {
+    background-color: rgba(0, 0, 0, .35);
+    padding: 10px 10px 10px 10px;
+    font-size: 19px;
+    flex-grow: 0;
+  }
