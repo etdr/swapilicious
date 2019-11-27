@@ -12,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule } from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import {MatInputModule} from '@angular/material/input';
     MatButtonModule,
     MatInputModule,
     FormsModule,
+    MatListModule,
+    MatCardModule,
     HttpClientModule
   ],
   providers: [],

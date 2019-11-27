@@ -1,25 +1,63 @@
 <div *ngIf="searchService.results.length">
-  <ul *ngIf="searchService.results[0].height">
-    <li *ngFor="let r of searchService.results">
-      <h3>{{r.name | uppercase}}</h3>
-      <p>mass {{r.mass}}, height {{r.height}}</p>
-      <p>born {{r.birth_year}}</p>
-    </li>
-  </ul>
-  <ul *ngIf="searchService.results[0].model">
-    <li *ngFor="let r of searchService.results">
-      <h3>{{r.name | uppercase}}</h3>
-      <p>model {{r.model}}</p>
-      <p>manufacturer {{r.manufacturer}}</p>
-      <p>{{r.length}} in length</p>
-    </li>
-  </ul>
-  <ul *ngIf="searchService.results[0].title">
-    <li *ngFor="let r of searchService.results">
-      <h3>{{r.title | uppercase}}</h3>
-      <p>Episode {{r.episode_id}}</p>
-      <p>directed by {{r.director}}</p>
-      <p>released on {{r.release_date}}</p>
-    </li>
-  </ul>
+  <mat-card *ngIf="searchService.results[0].height">
+    <mat-list *ngFor="let r of searchService.results">
+      <mat-list-item>
+        <mat-card-title>{{r.name | uppercase}}</mat-card-title>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-card-content>
+        mass {{r.mass}}, height {{r.height}}
+      </mat-card-content>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-card-content>
+          born {{r.birth_year}}
+        </mat-card-content>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+  <mat-card *ngIf="searchService.results[0].model">
+    <mat-list *ngFor="let r of searchService.results">
+      <mat-list-item>
+        <mat-card-title>{{r.name | uppercase}}</mat-card-title>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-card-content>
+          model {{r.model}}
+        </mat-card-content>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-card-content>
+          manufacturer {{r.manufacturer}}
+        </mat-card-content>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-card-content>
+          {{r.length}} in length
+        </mat-card-content>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+  <mat-card *ngIf="searchService.results[0].title">
+    <mat-list *ngFor="let r of searchService.results">
+        <mat-list-item>
+            <mat-card-title>{{r.title | uppercase}}</mat-card-title>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-card-content>
+              Episode {{r.episode_id}}
+            </mat-card-content>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-card-content>
+              directed by {{r.director}}
+            </mat-card-content>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-card-content>
+              released on {{r.release_date}}
+            </mat-card-content>
+        </mat-list-item>
+    </mat-list>
+  </mat-card>
 </div>
