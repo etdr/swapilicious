@@ -1,21 +1,21 @@
 <div class="searchSection">
   <div class="dropdown">
-    <button mat-button [matMenuTriggerFor]="belowMenu">Choose Your Star Wars Theme</button>
-      <mat-menu #belowMenu="matMenu" yPosition="below">
-        <button mat-menu-item (click)="kind='person'">People</button>
-        <button mat-menu-item (click)="kind='ship'">Ships</button>
-        <button mat-menu-item (click)="kind='film'">Films</button>
+    <button mat-button id="dropBut" [matMenuTriggerFor]="belowMenu">{{kind ? (kind | uppercase) : "CHOOSE YOUR STAR WARS SEARCH"}}</button>
+      <mat-menu #belowMenu="matMenu" yPosition="below" xPosition="after">
+        <button mat-menu-item (click)="kind='person'">PEOPLE</button>
+        <button mat-menu-item (click)="kind='ship'">SHIPS</button>
+        <button mat-menu-item (click)="kind='film'">FILMS</button>
       </mat-menu>
   </div>
 
 <br/>
 
   <div class="search">
-      <div>
+      <!-- <div> -->
       <input matInput type="search" id="search" name="search" placeholder="Search a Star Wars {{kind | uppercase}}" [(ngModel)]="term" >
-      </div>
-      <div>
-      <button mat-button type="search" (click)="getResults()">SEARCH</button>
-      </div>
+      <!-- </div> -->
+      <!-- <div> -->
+      <button id="searchBut" mat-button type="search" (click)="getResults()">SEARCH</button>
+      <!-- </div> -->
   </div>
 </div>
